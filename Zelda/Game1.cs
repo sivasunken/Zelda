@@ -57,8 +57,9 @@ namespace Zelda
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            _player.AddComponent(new Sprite(Content.Load<Texture2D>("link1"), 15, 21, new Vector2(50, 50)));
+            _player.AddComponent(new Sprite(Content.Load<Texture2D>("LinkWalkingSprite"), 15, 21, new Vector2(50, 50)));
             _player.AddComponent(new PlayerInput());
+            _player.AddComponent(new Animation(15, 16));
 
             // TODO: use this.Content to load your game content here
         }
